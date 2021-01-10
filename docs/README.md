@@ -1,0 +1,2 @@
+# Refactoring to Patterns Notes
+
