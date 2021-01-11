@@ -13,7 +13,7 @@ module.exports = {
   repo: 'https://github.com/aquastripe/refactoring-to-patterns-notes',
   themeConfig: {
     sidebar: [
-      ['/', '前言'],
+      ['/', 'Preface'],
       {
         title: 'Ch 7: Simplification',
         collapsable: false,
