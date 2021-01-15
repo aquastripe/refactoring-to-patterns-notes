@@ -6,4 +6,4 @@
 
 本書已絕版，請參考 [Google 電子書](https://books.google.com.tw/books/about/Refactoring_to_Patterns.html?id=ebBQAAAAMAAJ)。
 
-歡迎到發 [issue](https://github.com/aquastripe/refactoring-to-patterns-notes/issues) 討論或指正錯誤。
+歡迎到 GitHub 發 [issue](https://github.com/aquastripe/refactoring-to-patterns-notes/issues) 討論或指正錯誤。
