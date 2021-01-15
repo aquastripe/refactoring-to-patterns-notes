@@ -1,6 +1,6 @@
 # Refactoring to Patterns Notes
 
-[![Build Status](https://travis-ci.org/aquastripe/refactoring-to-patterns-notes.svg?branch=main)](https://travis-ci.org/aquastripe/refactoring-to-patterns-notes)
+[![Build Status](https://travis-ci.com/aquastripe/refactoring-to-patterns-notes.svg?branch=main)](https://travis-ci.com/aquastripe/refactoring-to-patterns-notes)
 
 重構－向範式前進 (Refactoring to Patterns) 的學習筆記。
 
