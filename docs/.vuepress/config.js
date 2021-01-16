@@ -15,6 +15,13 @@ module.exports = {
     sidebar: [
       ['/', 'Preface'],
       {
+        title: 'Ch 1: Why I wrote this book',
+        collapsable: false,
+        children: [
+          'ch1/'
+        ],
+      },
+      {
         title: 'Ch 7: Simplification',
         collapsable: false,
         children: [
