@@ -36,6 +36,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 4: Code Smells',
+        collapsable: false,
+        children: [
+          'ch4/'
+        ],
+      },
+      {
         title: 'Ch 7: Simplification',
         collapsable: false,
         children: [
