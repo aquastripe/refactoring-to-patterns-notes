@@ -53,7 +53,8 @@ module.exports = {
         title: 'Ch 6: Creation',
         collapsable: false,
         children: [
-          'ch6/'
+          'ch6/',
+          'ch6/replace-constructors-with-creation-methods',
         ],
       },
       {
