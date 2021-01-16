@@ -55,6 +55,7 @@ module.exports = {
         children: [
           'ch6/',
           'ch6/replace-constructors-with-creation-methods',
+          'ch6/encapsulate-classes-with-factory'
         ],
       },
       {
