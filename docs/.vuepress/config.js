@@ -22,6 +22,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 2: Refactoring',
+        collapsable: false,
+        children: [
+          'ch2/'
+        ],
+      },
+      {
         title: 'Ch 7: Simplification',
         collapsable: false,
         children: [
