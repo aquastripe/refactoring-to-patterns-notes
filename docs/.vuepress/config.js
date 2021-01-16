@@ -43,6 +43,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 5: A Catalog of Refactorings to Patterns',
+        collapsable: false,
+        children: [
+          'ch5/'
+        ],
+      },
+      {
         title: 'Ch 7: Simplification',
         collapsable: false,
         children: [
