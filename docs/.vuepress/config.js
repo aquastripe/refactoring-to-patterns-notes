@@ -57,6 +57,7 @@ module.exports = {
           'ch6/replace-constructors-with-creation-methods',
           'ch6/move-creation-knowledge-to-factory',
           'ch6/encapsulate-classes-with-factory',
+          'ch6/introduce-polymorphic-creation-with-factory-method',
         ],
       },
       {
