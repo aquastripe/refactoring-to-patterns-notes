@@ -50,6 +50,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 6: Creation',
+        collapsable: false,
+        children: [
+          'ch6/'
+        ],
+      },
+      {
         title: 'Ch 7: Simplification',
         collapsable: false,
         children: [
