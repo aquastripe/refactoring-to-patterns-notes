@@ -29,6 +29,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 3: Patterns',
+        collapsable: false,
+        children: [
+          'ch3/'
+        ],
+      },
+      {
         title: 'Ch 7: Simplification',
         collapsable: false,
         children: [
