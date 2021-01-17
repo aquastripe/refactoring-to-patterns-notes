@@ -58,6 +58,8 @@ module.exports = {
           'ch6/move-creation-knowledge-to-factory',
           'ch6/encapsulate-classes-with-factory',
           'ch6/introduce-polymorphic-creation-with-factory-method',
+          // 'ch6/encapsulate-composite-with-builder',
+          // 'ch6/inline-singleton',
         ],
       },
       {
