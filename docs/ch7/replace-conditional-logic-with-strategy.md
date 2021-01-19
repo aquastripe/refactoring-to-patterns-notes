@@ -17,7 +17,7 @@
 :::
 
 ::: warning 缺點
-- 當「以繼承為基礎的解法」或來自 Simplifying Conditional Expression [F] 的解法更簡單時，會讓設計變得更複雜
+- 當「以繼承為基礎的解法」或來自 *Simplifying Conditional Expression* [F] 的解法更簡單時，會讓設計變得更複雜
 - 會讓演算法從其 context class 中取資料的方式變得更複雜
 
 :::
