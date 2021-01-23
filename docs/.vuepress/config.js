@@ -69,7 +69,15 @@ module.exports = {
           'ch7/compose-method',
           'ch7/replace-conditional-logic-with-strategy'
         ],
-      }
+      },
+      {
+        title: 'Ch 11: Utilities',
+        collapsable: false,
+        children: [
+          'ch11/',
+          'ch11/chain-constructors',
+        ],
+      },
     ],
     nav: [
       { text: 'Home', link: '/' },
