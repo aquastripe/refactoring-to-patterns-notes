@@ -71,6 +71,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 8: Generalization',
+        collapsable: false,
+        children: [
+          'ch8/form-template-method',
+        ],
+      },
+      {
         title: 'Ch 11: Utilities',
         collapsable: false,
         children: [
