@@ -2,7 +2,9 @@
 
 兩個子類別中的方法用相似的步驟、相同的順序，但步驟不太一樣。
 
-將步驟以同一種簽名（signatures）抽取到方法中來通用化（generalize），再提取（pull up）通用化的方法形成 Template Method 。
+將步驟以同一種簽名（signatures）抽取到方法中來一般化（generalize），再提取（pull up）一般化的方法形成 Template Method 。
+
+![](../assets/fig/8.1.0.jpg)
 
 
 ## 動機
@@ -143,6 +145,10 @@ public class CapitalStrategyTermLoan {
     }
     ```
 
+    到目前已完成重構的工作。
+
+    以下是如果沒有 `riskAmountFor()` 會發生什麼事：
+
     ```java
     public abstract class CapitalStrategy {
         public double capital(Loan loan) { 
@@ -177,6 +183,12 @@ public class CapitalStrategyTermLoan {
     }
     ```
 
+    問題：
+    - 程式碼無法充分表達 risk-adjusted capital 公式
+    - `CapitalStretegy` 的三個 subclasses 中的兩個：`CapitalStrategyTermLoan` 和 `CapitalStrategyRevolver` 繼承了 hook 的無作為，因為那是 `CapitalStrategyAdvisedLine` 獨特的步驟，唯它獨有。
+
+    現在我們看看 `CapitalStrategyRevolver` 如何利用新的 `capital()` Template Method。他原本的 `capital()` 看起來像這樣：
+
     ```java
     public class CapitalStrategyRevolver {
         public double capital(Loan loan) { 
@@ -184,6 +196,8 @@ public class CapitalStrategyTermLoan {
         }
     }
     ```
+
+    前半部份套公式。後半部份類似，但處理的是貸款未使用的部份。我們可以重構這段程式碼，讓它利用 **Template Method**，如下：
 
     ```java{5-7}
     public class CapitalStrategyRevolver {
@@ -195,6 +209,8 @@ public class CapitalStrategyTermLoan {
         }
     }
     ```
+
+    問題：這個新實作是否比前一份容易理解？作者認為確實如此，因為他清楚的告知資金的計算是依據通用公式和附加的未使用資金。我們可以使用 *Extract Method* 讓未使用資金更清楚一些：
 
     ```java{5-7}
     public class CapitalStrategyRevolver {
