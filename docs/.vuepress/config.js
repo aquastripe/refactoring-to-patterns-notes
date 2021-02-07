@@ -67,7 +67,8 @@ module.exports = {
         collapsable: false,
         children: [
           'ch7/compose-method',
-          'ch7/replace-conditional-logic-with-strategy'
+          'ch7/replace-conditional-logic-with-strategy',
+          'ch7/replace-implicit-tree-with-composite',
         ],
       },
       {
