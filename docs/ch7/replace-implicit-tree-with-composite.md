@@ -227,9 +227,9 @@ public class OrdersWriter {
         public void addAttribute(String attribute, String value) { 
             attributes.append(" "); 
             attributes.append(attribute); 
-            attributes.append("=’"); 
+            attributes.append("=`"); 
             attributes.append(value); 
-            attributes.append("’" ); 
+            attributes.append("`" ); 
         } 
         public void addValue(String value) { 
             this.value = value; 
