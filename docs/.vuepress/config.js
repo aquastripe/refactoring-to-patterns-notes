@@ -79,6 +79,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 10: Accumulation',
+        collapsable: false,
+        children: [
+          'ch10/move-accumulation-to-collecting-parameter',
+        ],
+      },
+      {
         title: 'Ch 11: Utilities',
         collapsable: false,
         children: [
