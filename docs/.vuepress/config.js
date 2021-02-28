@@ -76,6 +76,7 @@ module.exports = {
         collapsable: false,
         children: [
           'ch8/form-template-method',
+          'ch8/extract-composite',
         ],
       },
       {
