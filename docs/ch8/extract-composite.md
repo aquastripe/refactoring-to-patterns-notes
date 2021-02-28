@@ -143,7 +143,7 @@ public class FormTag extends Tag {
         } 
         public String toPlainTextString() {
             // ...
-            for (Enumeration e = linkData() ;e.hasMoreElements();) 
+            for (Enumeration e = linkData(); e.hasMoreElements();) 
                 // ...
         } 
     }
@@ -261,7 +261,7 @@ public class FormTag extends Tag {
     3. 輸出 close 標籤
 
     因此，寫一個用來處理 start 標籤的共同函式，並且 *Pull Up* 到 `CompositeTag`：
-    ```java{1-18,24,32}
+    ```java{2-18,24,32}
     public abstract class CompositeTag extends Tag {
         public void putStartTagInto(StringBuffer sb) { 
             sb.append("<" + getTagName() + " ");
