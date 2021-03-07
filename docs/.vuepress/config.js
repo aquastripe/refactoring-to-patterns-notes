@@ -77,6 +77,7 @@ module.exports = {
         children: [
           'ch8/form-template-method',
           'ch8/extract-composite',
+          'ch8/replace-one-many-distinctions-with-composite',
         ],
       },
       {
