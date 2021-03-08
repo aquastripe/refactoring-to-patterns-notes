@@ -319,9 +319,10 @@ product.getColor() != targetColor || product.getPrice() < targetPrice
     ```java
     public class ProductRepository {
         public List selectBy(Spec spec) {
-            public List selectBy(List specs) { 
-                return selectBy(new CompositeSpec(specs)); 
-            }
+            // ...
+        }
+        public List selectBy(List specs) { 
+            return selectBy(new CompositeSpec(specs)); 
         }
     }
     ```
