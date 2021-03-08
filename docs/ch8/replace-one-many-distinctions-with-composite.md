@@ -103,13 +103,11 @@ public class ProductRepositoryTest extends TestCase {
 
 ```java
 public class ProductRepositoryTest extends TestCase {
-    public void testFindByColorSizeAndBelowPrice() { 
-        List specs = new ArrayList(); 
-        specs.add(new ColorSpec(Color.red)); 
-        specs.add(new SizeSpec(ProductSize.SMALL)); 
-        specs.add(new BelowPriceSpec(10.00)); 
-        List foundProducts = repository.selectBy(specs); 
-        assertEquals( "small red products below $10.00", 0, foundProducts.size());
+    public void testFindByColor() { 
+        List foundProducts = repository.selectBy(new ColorSpec(Color.red)); 
+        assertEquals("found 2 red products", 2, foundProducts.size()); 
+        assertTrue("found fireTruck", foundProducts.contains(fireTruck)); 
+        assertTrue( "found Toy Porsche Convertible", foundProducts.contains(toyConvertible));
     }
 }
 ```
@@ -234,7 +232,7 @@ product.getColor() != targetColor || product.getPrice() < targetPrice
                 boolean satisfiesAllSpecs = true; 
                 while (specifications.hasNext()) { 
                     Spec productSpec = ((Spec)specifications.next()); 
-                    satisfiesAllSpecs &= productSpec.isSatisfiedBy (product); 
+                    satisfiesAllSpecs &= productSpec.isSatisfiedBy(product); 
                 } 
                 if (satisfiesAllSpecs) 
                     foundProducts.add(product); 
