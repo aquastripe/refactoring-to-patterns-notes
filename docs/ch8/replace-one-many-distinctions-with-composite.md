@@ -349,7 +349,7 @@ product.getColor() != targetColor || product.getPrice() < targetPrice
     }
     ```
 
-    現在，只有一個 `selectBy(...)` 接受像 `ColorSpec` `SizeSpec` 或新的 `CompositeSpec` 這樣的 `Spec` 物件。想建立 **Composite** 結構來支援邏輯運算，還需要 `NotSpec` 和 `OrSpec` 這樣的類別。在 [Replace Implicit Language with Interpreter]() 這一章會描述如何產生這些類別。
+    現在，只有一個 `selectBy(...)` 接受像 `ColorSpec` `SizeSpec` 或新的 `CompositeSpec` 這樣的 `Spec` 物件。想建立 **Composite** 結構來支援邏輯運算，還需要 `NotSpec` 和 `OrSpec` 這樣的類別。在 [Replace Implicit Language with Interpreter](./replace-implicit-language-with-interpreter.md) 這一章會描述如何產生這些類別。
 6.  最後一步是對 `CompositeSpec` 內的 collection 實施 *Encapsulate Collection*，來讓 `CompositeSpec` 更具型別安全性。
 
     首先定義 `add(Spec spec)`:
