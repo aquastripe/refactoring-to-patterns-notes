@@ -69,6 +69,7 @@ module.exports = {
           'ch7/compose-method',
           'ch7/replace-conditional-logic-with-strategy',
           'ch7/replace-implicit-tree-with-composite',
+          'ch7/replace-conditional-dispatcher-with-command',
         ],
       },
       {
