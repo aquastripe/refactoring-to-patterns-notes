@@ -221,10 +221,11 @@
     此時 `Query` 不再有版本專屬的程式碼，卻存在重複碼。
 4. 這一步要消除重複碼。例如在 `doQuery()` 中：
    
-    ```java
+    ```java{10,20}
     abstract class Query {
         public abstract void doQuery() throws QueryException;
     }
+
     class QuerySD51 {
         public void doQuery() throws QueryException { 
             if (sdQuery != null) 
@@ -234,6 +235,7 @@
             executeQuery();        
         } 
     }
+
     class QuerySD52 {
         public void doQuery() throws QueryException { 
             if (sdQuery != null) 
