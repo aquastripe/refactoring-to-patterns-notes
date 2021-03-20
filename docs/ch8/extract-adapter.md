@@ -252,8 +252,7 @@
     ```java
     public abstract class Query {
         protected abstract SDQuery createQuery(); // a Factory Method [DP] 
-        public void doQuery() throws QueryException { 
-            // a Template Method [DP] 
+        public void doQuery() throws QueryException { // a Template Method [DP] 
             if (sdQuery != null) 
                 sdQuery.clearResultSet(); 
             
