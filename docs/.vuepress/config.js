@@ -81,6 +81,7 @@ module.exports = {
           'ch8/replace-one-many-distinctions-with-composite',
           'ch8/replace-implicit-language-with-interpreter',
           'ch8/extract-adapter',
+          'ch8/unify-interfaces-with-adapter',
         ],
       },
       {
