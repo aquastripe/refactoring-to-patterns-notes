@@ -18,7 +18,7 @@
 ::: tip 優點
 - 讓客戶碼可以透過相同介面來和替換性類別（alternative classes）溝通，來移除或減少重複碼
 - 讓客戶碼有可能透過一個共同介面來和各物件溝通，以簡化客戶碼
-- 讓客戶馬漢替換性類別（alternative classes）的互動方式一致
+- 讓客戶碼和替換性類別（alternative classes）的互動方式一致
 
 :::
 
