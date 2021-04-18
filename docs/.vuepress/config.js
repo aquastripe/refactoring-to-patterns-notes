@@ -85,6 +85,13 @@ module.exports = {
         ],
       },
       {
+        title: 'Ch 9: Protection',
+        collapsable: false,
+        children: [
+          'ch9/replace-type-code-with-class',
+        ],
+      },
+      {
         title: 'Ch 10: Accumulation',
         collapsable: false,
         children: [
