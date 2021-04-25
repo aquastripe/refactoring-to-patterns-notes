@@ -90,7 +90,7 @@ public class SystemPermission {
 
     public void granted() { 
         if (!state.equals(CLAIMED)) 
-        return;
+            return;
     }
 }
 ```
