@@ -90,6 +90,7 @@ module.exports = {
         collapsable: false,
         children: [
           'ch9/replace-type-code-with-class',
+          'ch9/introduce-null-object',
         ],
       },
       {
