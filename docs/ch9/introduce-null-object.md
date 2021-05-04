@@ -66,7 +66,7 @@ else
 
 ## 範例
 
-（老人講古）開發某個知名音樂電視網站的 Java 版本。網站的特徵是 applet 搭配許多可點選的選單和子選單、動畫短片、音樂新聞，還有很多酷圖。主網頁外貿是一個分割成三個部份的框（frame），其中兩個含有 applets。
+（老人講古）開發某個知名音樂電視網站的 Java 版本。網站的特徵是 applet 搭配許多可點選的選單和子選單、動畫短片、音樂新聞，還有很多酷圖。主網頁外貌是一個分割成三個部份的框（frame），其中兩個含有 applets。
 
 ![](../assets/fig/9.3.2.jpg)
 
@@ -194,18 +194,18 @@ public class NavigationApplet extends Applet {
             return mouseEventHandler.mouseMove(grap hicsContext, event, x, y ); 
             // return true; 
         }
-    }
 
-    public boolean mouseDown(Event event, int x, int y) { 
-        // if (mouseEventHandler != null) 
-        return mouseEventHandler.mouseDown(graphicsContext, event, x, y); 
-        // return true; 
-    } 
+        public boolean mouseDown(Event event, int x, int y) { 
+            // if (mouseEventHandler != null) 
+            return mouseEventHandler.mouseDown(graphicsContext, event, x, y); 
+            // return true; 
+        } 
 
-    public boolean mouseUp(Event event, int x, int y) { 
-        // if (mouseEventHandler != null) 
-        return mouseEventHandler.mouseUp(graphicsContext, event, x, y); 
-        // return true; 
+        public boolean mouseUp(Event event, int x, int y) { 
+            // if (mouseEventHandler != null) 
+            return mouseEventHandler.mouseUp(graphicsContext, event, x, y); 
+            // return true; 
+        }
     }
     ```
 
