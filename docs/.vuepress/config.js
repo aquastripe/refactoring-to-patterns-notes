@@ -91,6 +91,7 @@ module.exports = {
         children: [
           'ch9/replace-type-code-with-class',
           'ch9/introduce-null-object',
+          'ch9/limit-instantiation-with-singleton'
         ],
       },
       {
