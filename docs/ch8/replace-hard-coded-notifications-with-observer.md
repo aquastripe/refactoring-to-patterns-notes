@@ -50,7 +50,7 @@
 
 這項重構詳述幾個步驟，用來消除不必要的 notifier，方法是讓這些 notifiers 的 superclass 變成一個 subject (ConcreteSubject)，以及把 receivers 變成 observers (ConcreteObservers)。
 
- 1. 如果 notifier 對其 receiver 進行自訂行為而不是執行單純的通知邏輯，請實施 *Move Method* 將此行為移到 notifier 的 receiver 中。完成後的 notifierr 只包含通知函式（用來通知 receiver）。對所有 notifiers 重複此步驟。
+ 1. 如果 notifier 對其 receiver 進行自訂行為而不是執行單純的通知邏輯，請實施 *Move Method* 將此行為移到 notifier 的 receiver 中。完成後的 notifier 只包含通知函式（用來通知 receiver）。對所有 notifiers 重複此步驟。
  2. 在 receiver 身上實施 *Extract Interface* 產生一個 observer 介面，只挑選那些被 notifier 呼叫的函式放上去。如果其他 notifiers 並非透過 observer 介面來呼叫 receiver 的某些函式，就把那些函式加到 observer 介面，以便這個介面能被所有 receivers 用上。
  3. 讓每個 receiver 都實作 observer 介面。然後讓每個 notifier 只透過 observer 介面與其 receiver 聯絡。現在，每個 receiver 都是個 observer。
  4. 選出一個 notifier，並為它的通知函式（notification methods）實施 *Pull Up Method*，這包括 pulling up notifier 的 observer interface reference，還有用來設定那個 reference 的程式碼。現在，讓 subject 成為 notifier 的 superclass。為所有 notifiers 重複此步驟。
@@ -79,7 +79,9 @@ class UITestResult extends TestResult {
     } 
     // ... 
 } 
-    
+```
+
+```java
 package ui; 
 
 public class TestRunner extends Frame { // TestRunner for AWT 
@@ -127,8 +129,10 @@ public class TestRunner extends Frame { // TestRunner for AWT
 
     實施 *Move Method*，讓 `TextTestResult` 擁有純粹的通知函式，同時將自訂行為移到相應的 `TestRunner` 中：
 
-    ```java{3,5-7,11}
-    package textui; public class TextTestResult extends TestResult {
+    ```java{5,7-9,13}
+    package textui; 
+    
+    public class TextTestResult extends TestResult {
         // ... 
         private TestRunner fRunner; 
         
@@ -143,8 +147,9 @@ public class TestRunner extends Frame { // TestRunner for AWT
     }
     ```
     
-    ```java{8-11}
-    package textui; 
+    ```java{9-12}
+    package textui;
+
     public class TestRunner {
         // ...
         protected TextTestResult createTestResult() { 
@@ -195,8 +200,10 @@ public class TestRunner extends Frame { // TestRunner for AWT
 
     現在，檢視其他 notifier (`UITestResult`)，看會不會繞過 `TestListener` interface 呼叫其他 `TestRunner` 函式。結果有，它覆寫了一個名叫 `endTest(...)` 的 `TestResult` 函式：
 
-    ```java{5}
-    package ui; class UITestResult extends TestResult {
+    ```java{7}
+    package ui; 
+    
+    class UITestResult extends TestResult {
         // ...
         public synchronized void endTest(Test test) { 
             super.endTest(test); 
@@ -231,7 +238,8 @@ public class TestRunner extends Frame { // TestRunner for AWT
         
     class UITestResult extends TestResult {
         // ...
-        protected TestListener fRunner; 
+        protected TestListener fRunner;
+
         UITestResult( TestListener runner) { 
             fRunner= runner; 
         }
@@ -286,12 +294,18 @@ public class TestRunner extends Frame { // TestRunner for AWT
             fRunner.startTest(this, test); 
         }
     }
-    
-    package ui; 
+    ```
+
+    ```java
+    package ui;
+
     class UITestResult extends TestResult {
     } 
-    
+    ```
+
+    ```java
     package textui; 
+
     class TextTestResult extends TestResult {
     }
     ```
