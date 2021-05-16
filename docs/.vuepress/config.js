@@ -80,6 +80,7 @@ module.exports = {
           'ch8/replace-implicit-language-with-interpreter',
           'ch8/extract-adapter',
           'ch8/unify-interfaces-with-adapter',
+          'ch8/replace-hard-coded-notifications-with-observer'
         ],
       },
       {
