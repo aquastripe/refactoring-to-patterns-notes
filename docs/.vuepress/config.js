@@ -68,6 +68,7 @@ module.exports = {
           'ch7/replace-implicit-tree-with-composite',
           'ch7/replace-conditional-dispatcher-with-command',
           'ch7/replace-state-altering-conditionals-with-state',
+          'ch7/move-embellishment-to-decorator'
         ],
       },
       {
@@ -105,6 +106,8 @@ module.exports = {
         children: [
           'ch11/',
           'ch11/chain-constructors',
+          'ch11/unify-interfaces',
+          'ch11/extract-parameter'
         ],
       },
     ],
