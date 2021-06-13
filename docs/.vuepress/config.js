@@ -98,6 +98,7 @@ module.exports = {
         collapsable: false,
         children: [
           'ch10/move-accumulation-to-collecting-parameter',
+          'ch10/move-accumulation-to-visitor'
         ],
       },
       {
