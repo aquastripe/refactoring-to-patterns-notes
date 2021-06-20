@@ -82,7 +82,7 @@ class ProductFinder {
 
 ## 範例
 
-範例來自庫存管理系統。這個系統的 `Finder` 類別罹患了組合爆炸的壞味道，因此需要 *refactor to Specification*。
+範例來自庫存管理系統。這個系統的 `Finder` 類別罹患了組合爆炸的壞味道，因此需要 *refactor to **Specification***。
 
 一開始作者先研究測試碼，還有這項重構所需的 `ProductFinder` 程式碼。在任何測試開跑前，需要一個 `ProductRepository` 來裝各種 `Product` 物件，還有知道 `ProductRepository` 的 `ProductFinder` 物件：
 
