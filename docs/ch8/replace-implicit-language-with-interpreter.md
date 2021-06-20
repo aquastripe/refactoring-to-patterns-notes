@@ -123,7 +123,7 @@ public class ProductFinderTests extends TestCase {
         List foundProducts = finder.byColor(Color.red); 
         assertEquals("found 2 red products", 2, foundProducts.size()); 
         assertTrue("found fireTruck", foundProducts.contains(fireTruck)); 
-        assertTrue( "found Toy Porsche Convertible", foundProducts.contains(toyConvertible)); 
+        assertTrue("found Toy Porsche Convertible", foundProducts.contains(toyConvertible)); 
     } 
     
     public void testFindByPrice() { 
@@ -184,11 +184,11 @@ public class ProductFinderTests extends TestCase {
     
     public void testFindBelowPriceAvoidingAColor() { 
         List foundProducts = finder.belowPriceAvoidingAColor(9.00f, Color.white); 
-        assertEquals( "found 1 non-white product < $9.00", 1, foundProducts.size()); 
+        assertEquals("found 1 non-white product < $9.00", 1, foundProducts.size()); 
         assertTrue("found fireTruck", foundProducts.contains(fireTruck)); 
         
         foundProducts = finder.belowPriceAvoidingAColor(9.00f, Color.red);
-        assertEquals( "found 1 non-red product < $9.00", 1, foundProducts.size()); 
+        assertEquals("found 1 non-red product < $9.00", 1, foundProducts.size()); 
         assertTrue("found baseball", foundProducts.contains(baseball)); 
     }
 }
@@ -381,7 +381,7 @@ public class ProductFinder {
         Iterator products = repository.iterator();
         while (products.hasNext()) { 
             Product product = (Product)products.next();
-            if ( colorSpec.isSatisfiedBy(product) && priceSpec.isSatisfiedBy(product) ) 
+            if (colorSpec.isSatisfiedBy(product) && priceSpec.isSatisfiedBy(product)) 
                 foundProducts.add(product); 
         }
         return foundProducts; 
