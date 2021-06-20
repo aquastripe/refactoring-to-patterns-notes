@@ -49,7 +49,7 @@ class ProductFinder {
 :::
 
 ::: warning 缺點
-- 初始階段需要額外定義文法並修改客戶馬來使用。
+- 初始階段需要額外定義文法並修改客戶碼來使用。
 - 當你語言很複雜的時候，這方法需要太多編程工作。
 - 當你語言很簡單的時候，這方法會讓設計變得更複雜。
 
@@ -434,7 +434,7 @@ public class ProductFinder {
         AndSpec spec = new AndSpec(colorSpec, priceSpec);
         while (products.hasNext()) {
             Product product = (Product)products.next(); 
-            if (spec. isSatisfiedBy(product)) 
+            if (spec.isSatisfiedBy(product)) 
                 foundProducts.add(product);
         }
         return foundProducts; 
