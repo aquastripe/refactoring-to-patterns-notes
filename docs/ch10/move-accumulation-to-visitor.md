@@ -524,8 +524,7 @@ public class TextExtractor {
     }
     
     public abstract class AbstractNode implements Node {
-        public void accept(TextExtractor textExtractor) { 
-        }
+        public void accept(TextExtractor textExtractor) {}
     }
     ```
 7. 改變 `extractText()` 讓它以多型方式呼叫 `accept()`：
@@ -559,16 +558,17 @@ public class TextExtractor {
     ```java
     public interface Node {
         // ...
-        public void accept(NodeVisitor nodeVisitor); 
-        
-        public abstract class AbstractNode implements Node {
-            public void accept(NodeVisitor nodeVisitor) {} 
-        }            
-        public class StringNode extends AbstractNode {
-            // ...
-            public void accept(NodeVisitor nodeVisitor) { 
-                nodeVisitor.visitStringNode(this); 
-            }
-        }
+        public void accept(NodeVisitor nodeVisitor);         
     }
+    
+    public abstract class AbstractNode implements Node {
+        public void accept(NodeVisitor nodeVisitor) {} 
+    }
+
+    public class StringNode extends AbstractNode {
+        // ...
+        public void accept(NodeVisitor nodeVisitor) { 
+            nodeVisitor.visitStringNode(this); 
+        }
+    }   
     ```
